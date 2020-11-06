@@ -44,6 +44,13 @@ composer install
 
 - [escimages documentation](doc/escimages.md)
 
+## Run with Docker
+
+```bash
+docker build . -t escpos-tools
+docker run -v $PWD:/data escpos-tools /bin/bash -c "php esc2html.php /data/receipt-with-logo.bin > /data/output.html"
+```
+
 ## Contribute
 
 - [CONTRIBUTING.md](CONTRIBUTING.md)
